@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" pageWidth="792" pageHeight="612" orientation="Landscape" columnWidth="752" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="b63fff7f-93ba-4f72-9f96-4a722da77911">
+	<property name="ireport.zoom" value="1.9965000000000006"/>
+	<property name="ireport.x" value="210"/>
+	<property name="ireport.y" value="31"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT * FROM buku;]]>
+	</queryString>
+	<field name="isbn" class="java.lang.String"/>
+	<field name="judul_buku" class="java.lang.String"/>
+	<field name="tahun_terbit" class="java.lang.String"/>
+	<field name="penerbit" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<rectangle>
+				<reportElement x="0" y="52" width="122" height="27" uuid="45edb555-df0e-4fc3-8db8-636f578895e8"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="122" y="52" width="299" height="27" uuid="ad28efc4-cecf-42d4-a4bf-e1fa89cb4b5c"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="421" y="52" width="84" height="27" uuid="d52a9cfe-cfe1-4c7c-aa46-6155070c8cc5"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="505" y="52" width="247" height="27" uuid="8ea07ef4-e8fd-404e-97f9-88251d7c4860"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="0" y="52" width="122" height="20" uuid="123b27c3-c84a-4bb2-9192-eb1edfc04d20"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[ISBN]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="122" y="52" width="299" height="20" uuid="b0f4c890-0c1d-470c-b991-76a434bef2ae"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[JUDUL BUKU]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="421" y="52" width="83" height="20" uuid="63addfbf-d063-49c6-ad22-7e80d702902c"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[TAHUN]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="505" y="52" width="247" height="20" uuid="1dff3ecd-4e4b-4869-a786-e577d4fa0162"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[PENERBIT]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="216" y="10" width="299" height="20" uuid="1c506f10-6da3-4313-91f6-53492c2a8409"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[DAFTAR BUKU DI GUNUNG AGUNG]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="216" y="30" width="299" height="20" uuid="571d2fb2-6344-4303-a981-66141f439c02"/>
+				<textElement textAlignment="Center" verticalAlignment="Top">
+					<font size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[MALL DELTA PLAZA SURABAYA]]></text>
+			</staticText>
+		</band>
+	</title>
+	<detail>
+		<band height="28" splitType="Stretch">
+			<rectangle>
+				<reportElement x="0" y="0" width="122" height="27" uuid="15a5d45a-8ff3-4f05-9b67-5ca26f4fcc76"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="122" y="0" width="299" height="27" uuid="df73fdee-0406-4139-8b08-69df44785f2c"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="421" y="0" width="84" height="27" uuid="3abf45ae-b207-4074-9854-f3566b5661a8"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="505" y="0" width="247" height="27" uuid="a2df7162-6f5e-4dad-b7da-ae71fe2cf2e5"/>
+			</rectangle>
+			<textField>
+				<reportElement x="505" y="5" width="247" height="23" uuid="a79a7784-c193-4185-a255-dcc9a2760dc2"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{penerbit}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="422" y="5" width="83" height="20" uuid="85008b10-7ab2-4c8a-9228-96fd92940f4d"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{tahun_terbit}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="122" y="6" width="299" height="19" uuid="5c302a37-4390-4a98-bba4-5f06f1307991"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{judul_buku}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="0" y="5" width="122" height="20" uuid="f6eb7dc8-7a95-451f-b1f9-1f0d99ea43e1"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{isbn}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>
